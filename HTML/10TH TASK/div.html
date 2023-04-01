@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>division tag</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 22%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .box h2 {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 360px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="./vegetables.jfif" alt="Image 1">
+            <h2>VEGETABLES</h2>
+        </div>
+        <div class="box">
+            <img src="./fruits.jfif" alt="Image 2">
+            <h2>FRUITS</h2>
+        </div>
+        <div class="box">
+            <img src="./birds.jfif" alt="Image 3">
+            <h2>BIRDS</h2>
+        </div>
+        <div class="box">
+            <img src="./animals.jfif" alt="Image 4">
+            <h2>ANIMALS</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
