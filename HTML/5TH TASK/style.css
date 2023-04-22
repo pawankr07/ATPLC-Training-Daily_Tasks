@@ -1,0 +1,23 @@
+.index {
+    background-color: rgb(65, 156, 68);
+    font-size: 30px;
+    margin: -8px;
+    padding-left: 10px;
+    color: rgb(38, 40, 40);
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+p {
+    font-weight: bold;
+    font-style: normal;
+    font-size: larger;
+}
