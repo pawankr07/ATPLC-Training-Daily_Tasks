@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Programs</title>
+    <script>
+        function printNameAndAddress() {
+            var name = prompt("Enter your name:");
+            var address = prompt("Enter your address:");
+
+            var result = "Name: " + name + "<br>Address: " + address;
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function checkVariableEquality() {
+            var a = prompt("Enter the first value:");
+            var b = prompt("Enter the second value:");
+
+            if (a === b && typeof a === typeof b) {
+                var result = "The values and data types are the same.";
+            } else {
+                var result = "The values and/or data types are different.";
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function addAndCapitalizeStrings() {
+            var str1 = prompt("Enter the first string:");
+            var str2 = prompt("Enter the second string:");
+
+            var concatenatedString = str1 + str2;
+            var capitalizedString = concatenatedString.toUpperCase();
+
+            document.getElementById("output").innerHTML = capitalizedString;
+        }
+
+        function convertToBytes() {
+            var string = prompt("Enter a string:");
+
+            var bytes = new Blob([string]).size;
+
+            document.getElementById("output").innerHTML = "Length in bytes: " + bytes + " bytes";
+        }
+
+        function roundToDigits() {
+            var number = prompt("Enter a number:");
+            var digits = prompt("Enter the number of digits to round to:");
+
+            var roundedNumber = parseFloat(number).toFixed(digits);
+
+            document.getElementById("output").innerHTML = "Rounded number: " + roundedNumber;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>JavaScript Programs</h2>
+
+    <button onclick="printNameAndAddress()">Print Name and Address</button>
+    <button onclick="checkVariableEquality()">Check Variable Equality</button>
+    <button onclick="addAndCapitalizeStrings()">Add and Capitalize Strings</button>
+    <button onclick="convertToBytes()">Convert to Bytes</button>
+    <button onclick="roundToDigits()">Round to Digits</button>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Tournament Teams</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        .team {
+            width: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+            text-align: center;
+        }
+
+        .team img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Cricket Tournament</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./schedule.html">Schedule</a></li>
+                <li><a href="./teams.html">Teams</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Cricket Tournament Teams</h1>
+    <div class="team-container">
+        <div class="team">
+            <img src="./csk.jpg" alt="Team A">
+            <h3>Team A</h3>
+            <p>Chennai Super Kings Team A</p>
+        </div>
+        <div class="team">
+            <img src="./gt.jpg" alt="Team B">
+            <h3>Team B</h3>
+            <p>Gujarat Titans Team B</p>
+        </div>
+        <div class="team">
+            <img src="./lsg.jpg" alt="Team C">
+            <h3>Team C</h3>
+            <p> Lucknow Super Giants Team C</p>
+        </div>
+        <div class="team">
+            <img src="./mi.jpg" alt="Team D">
+            <h3>Team D</h3>
+            <p>Mumbai Indians Team D</p>
+        </div>
+    </div>
+</body>
+
+</html>

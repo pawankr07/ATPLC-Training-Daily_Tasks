@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array Operations</title>
+    <script>
+        // Function to sort an array
+        function sortArray() {
+            var elements = prompt("Enter elements of the array separated by commas:");
+
+            // Convert the comma-separated string into an array
+            var array = elements.split(",");
+
+            // Use the sort method to sort the array
+            array.sort();
+
+            document.getElementById("output").innerHTML = "Sorted Array: " + array.join(", ");
+        }
+
+        // Function to concatenate two arrays
+        function concatenateArrays() {
+            var elements1 = prompt("Enter elements of the first array separated by commas:");
+            var elements2 = prompt("Enter elements of the second array separated by commas:");
+
+            // Convert the comma-separated strings into arrays
+            var array1 = elements1.split(",");
+            var array2 = elements2.split(",");
+
+            // Use the concat method to concatenate the arrays
+            var concatenatedArray = array1.concat(array2);
+
+            document.getElementById("output").innerHTML = "Concatenated Array: " + concatenatedArray.join(", ");
+        }
+
+        // Function to remove the first element from an array
+        function removeFirstElement() {
+            var elements = prompt("Enter elements of the array separated by commas:");
+
+            // Convert the comma-separated string into an array
+            var array = elements.split(",");
+
+            // Use the shift method to remove the first element from the array
+            array.shift();
+
+            document.getElementById("output").innerHTML = "Array with First Element Removed: " + array.join(", ");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>JavaScript Array Operations</h2>
+
+    <button onclick="sortArray()">Sort Array</button>
+    <button onclick="concatenateArrays()">Concatenate Arrays</button>
+    <button onclick="removeFirstElement()">Remove First Element</button>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+</body>
+
+</html>

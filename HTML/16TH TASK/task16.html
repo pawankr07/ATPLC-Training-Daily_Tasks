@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Examples</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        // Function to display the values from the Basic Information Form
+        function displayFormValues() {
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mobile").value;
+            var email = document.getElementById("email").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var education = document.querySelectorAll('input[name="education"]:checked');
+            var educationValues = Array.from(education).map(function (input) {
+                return input.value;
+            });
+            var likeTea = document.getElementById("tea").value;
+
+            var output = "Name: " + name + "<br>";
+            output += "Mobile: " + mobile + "<br>";
+            output += "Email: " + email + "<br>";
+            output += "Gender: " + gender + "<br>";
+            output += "Education: " + educationValues.join(", ") + "<br>";
+            output += "Do you like tea? " + likeTea;
+
+            document.getElementById("output").innerHTML = output;
+        }
+
+        // Function to change the image inside an img tag on button click
+        function changeImage() {
+            var img = document.getElementById("image");
+            img.src = "image2.jpg";
+        }
+
+        // Function to increase the font size
+        function increaseFontSize() {
+            var output = document.getElementById("output");
+            var currentSize = parseFloat(window.getComputedStyle(output).fontSize);
+            var newSize = currentSize + 2;
+            output.style.fontSize = newSize + "px";
+        }
+
+        // Function to decrease the font size
+        function decreaseFontSize() {
+            var output = document.getElementById("output");
+            var currentSize = parseFloat(window.getComputedStyle(output).fontSize);
+            var newSize = currentSize - 2;
+            output.style.fontSize = newSize + "px";
+        }
+
+        // Function to show current date and time
+        function showDateTime() {
+            var dateTime = new Date();
+            document.getElementById("datetime").innerHTML = "Current Date & Time: " + dateTime;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>JavaScript Examples</h2>
+
+    <h3>Basic Information Form:</h3>
+    <form id="basic-info-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female" required> Female<br>
+
+        <label for="education">Education:</label>
+        <input type="checkbox" name="education" value="School"> School
+        <input type="checkbox" name="education" value="College"> College
+        <input type="checkbox" name="education" value="University"> University<br>
+
+        <label for="tea">Do you like tea?</label>
+        <select id="tea" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <button type="button" onclick="displayFormValues()">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+    <h3>Form Values:</h3>
+    <h3>Image:</h3>
+    <img id="image" src="./image1.jpg" alt="Original Image">
+    <button type="button" onclick="changeImage()">Change Image</button>
+    <h3>Font Size:</h3>
+    <div id="output">Hello</div>
+    <button type="button" onclick="increaseFontSize()">Increase Font Size</button>
+    <button type="button" onclick="decreaseFontSize()">Decrease Font Size</button>
+    <h3>Date & Time:</h3>
+    <p id="datetime"></p>
+    <script>
+        showDateTime(); // Display initial date and time
+
+        // Function to show current date and time every second
+        setInterval(showDateTime, 1000);
+    </script>
+</body>
+
+</html>
